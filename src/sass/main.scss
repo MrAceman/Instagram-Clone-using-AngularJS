@@ -1,0 +1,33 @@
+@import 'bulma';
+
+.flexContainer{
+ display: -webkit-flex;
+ display: flex;
+ -webkit-flex-direction: row;
+ flex-direction: row;
+}
+
+.singlePhoto {
+  max-width:250px;
+}
+
+ul{
+  list-style: none;
+  text-decoration: none;
+}
+
+li{
+  -webkit-flex: 2 0 0;
+   flex: 2 0 0;
+  width: 22%;
+  margin:0;
+  // display:inline-block;
+}
+
+.footer{
+  text-align: center;
+}
+
+.photoDescription{
+  width:100%;
+}
