@@ -1,5 +1,7 @@
 @import 'bulma';
 
+
+
 img.userPic{
   height:200px;
   // width:150px;
@@ -27,6 +29,58 @@ img.userPic{
   // &:nth-child(5n+1) {
   //   margin-right: 0;
   // }
+}
+
+.media{
+  text-align: center;
+
+}
+
+
+.name{
+  float:left;
+}
+
+.but{
+  float:right;
+}
+
+.edit-button{
+
+}
+
+.delete-button{
+}
+
+.del-button{
+  background-color: transparent;
+  border:0;
+}
+
+.del-button:hover{
+  color:red;
+}
+
+.like-button{
+  background-color: transparent;
+  border:0;
+}
+
+.like-button:hover{
+  color:green;
+}
+
+.photoDescription{
+  width:100%;
+  height:100%;
+}
+
+.descriptionChoices{
+  font-size:2em;
+}
+
+.choiceButtons{
+  // clear:both;
 }
 
 .footer{

@@ -8,13 +8,23 @@ function init () {
     })
 }
 
-// $scope.deletePhoto = (id) => {
-//   $http.delete(SERVER.URL + id).then((res) => {
-//     $scope.photoArray = $scope.photoArray.filter( (photo) => {
-//       return photo._id !== id;
-//     });
-//   });
-// }
+$scope.deletePhoto = (id) => {
+  $http.delete(SERVER.URL + id).then((res) => {
+    $scope.photoArray = $scope.photoArray.filter( (photo) => {
+      return photo._id !== id;
+    });
+  });
+}
+
+ $scope.likePhoto = (photo) => {
+   photo.likeCount ++;
+  console.log(photo);
+    $http.put(SERVER.URL + photo._id,photo).then((res) => {
+
+    });
+ }
+
+
 
 
 }
