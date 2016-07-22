@@ -8,13 +8,13 @@ function init () {
     })
 }
 
-$scope.deletePhoto = (id) => {
-  $http.delete(SERVER.URL + id).then((res) => {
-    $scope.photoArray = $scope.photoArray.filter( (photo) => {
-      return photo._id !== id;
-    });
-  });
-}
+// $scope.deletePhoto = (id) => {
+//   $http.delete(SERVER.URL + id).then((res) => {
+//     $scope.photoArray = $scope.photoArray.filter( (photo) => {
+//       return photo._id !== id;
+//     });
+//   });
+// }
 
 
 }

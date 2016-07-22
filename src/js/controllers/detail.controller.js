@@ -1,4 +1,4 @@
-function DetailController($scope, $stateParams, $http, SERVER) {
+function DetailController($scope, $stateParams, $http, $state, SERVER) {
 
     $scope.detailPhoto = {};
 
@@ -10,7 +10,18 @@ function DetailController($scope, $stateParams, $http, SERVER) {
             $scope.detailPhoto = res.data;
         });
     }
+
+    $scope.deletePhoto = (id) => {
+      $http.delete(SERVER.URL + $stateParams.id).then((res) => {
+        console.log(res);
+        $state.go('root.home');
+        // $scope.photoArray = $scope.photoArray.filter( (photo) => {
+        //   return photo._id !== id;
+        // });
+      });
+    }
+
 }
 
-DetailController.$inject = ['$scope', '$stateParams', '$http', 'SERVER'];
+DetailController.$inject = ['$scope', '$stateParams', '$http', '$state', 'SERVER'];
 export {DetailController};

@@ -1,7 +1,12 @@
 <h1 class="title">Photo Details Page</h1>
 
 <div class="columns">
-<div class="column is-three-quarters"><img ng-src="{{ detailPhoto.url }}" alt="{{ detailPhoto.name }}"></div>
+<div class="column is-three-quarters">
+  <a class="fullPic" href="{{detailPhoto.url}}">
+  <img ng-src="{{ detailPhoto.url }}" alt="{{ detailPhoto.name }}"></div>
+</a>
 <div class="column is-one-quarter">{{detailPhoto.description}}</div>
 </div>
-<button ng-click="deletePhoto(detailPhoto._id)" class="delete-button">Delete</button>
+
+<button ng-click="editPhoto(editPhoto._id)" class="edit-button">Edit Photo</button>
+<button ng-click="deletePhoto(detailPhoto._id)" class="delete-button">Delete Photo</button>
