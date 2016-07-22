@@ -16,11 +16,6 @@ function config ($stateProvider, $urlRouterProvider) {
       controller: 'HomeController'
     })
 
-    .state('root.detail', {
-      url:'/detail',
-      templateUrl: 'templates/detail.tpl.html'
-    })
-
     .state('root.addphoto', {
       url:'/addphoto',
       templateUrl: 'templates/addphoto.tpl.html',
@@ -30,6 +25,12 @@ function config ($stateProvider, $urlRouterProvider) {
     .state('root.editphoto', {
       url:'/editphoto',
       templateUrl: 'templates/editphoto.tpl.html'
+    })
+
+    .state('root.detail', {
+      url: '/photo/:id',
+      templateUrl: 'templates/detail.tpl.html',
+      controller: 'DetailController'
     });
 
 

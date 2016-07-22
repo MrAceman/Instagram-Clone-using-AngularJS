@@ -1,16 +1,17 @@
 <h1 class="title">Home Page</h1>
 <hr>
 
-<ul>
-  <div class = "columns is-multiline">
-  <li ng-repeat="photo in photoArray" data-id="{{photo._id}}">
-    <div class="column is-one-quarter">
-      <span class="name"><br>{{photo.name}}</span><br>
-      {{photo.url}}<br>
-    <img class="singlePhoto" ng-src="{{photo.url}}" alt="{{photo.name}}"><br>
-    <span class="photoDescription">{{photo.description}}</span><br>
-    <button ng-click="deletePhoto(photo._id)" class="delete-button">Delete</button>
-  </div>
-  </li>
+<div class="card" ng-repeat="photo in photoArray" data-id="{{photo._id}}">
+    <a href="/#/photo/{{photo._id}}">
+        <div class="card-image">
+            <figure class="image is-4by3">
+                <img class="singlePhoto" ng-src="{{photo.url}}" alt="{{photo.name}}">
+            </figure>
+        </div>
+        <div class="card-content">
+            <div class="media">
+                <p class="title is-5">{{photo.name}}</p>
+            </div>
+        </div>
+    </a>
 </div>
-</ul>
