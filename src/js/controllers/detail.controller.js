@@ -17,6 +17,7 @@ function DetailController($scope, $stateParams, $http, $state, SERVER) {
       });
     }
 
+// Functionality for editting photo description
       $scope.editorEnabled = false;
 
       $scope.enableEditor = function() {
@@ -35,27 +36,27 @@ function DetailController($scope, $stateParams, $http, $state, SERVER) {
         $http.put(SERVER.URL + $stateParams.id, photo).then((res) => {
 
         });
+      };
+// Functionality for editting photo title
+      $scope.editorNameEnabled = false;
 
+      $scope.enableNameEditor = function() {
+        $scope.editorNameEnabled = true;
+        $scope.editableName = $scope.detailPhoto.name;
       };
 
+      $scope.disableNameEditor = function() {
+        $scope.editorNameEnabled = false;
+      };
 
+      $scope.saveName = function(photo) {
+        $scope.detailPhoto.name = $scope.editableName;
+        $scope.disableNameEditor();
 
-//
-//  $scope.enableEditor = (photo) => {
-//   console.log('Hi there');
-//
-//     $scope.editorEnabled = true;
-//     photo.editableTitle = photo.title;
-//
-//     $scope.disableEditor = function() {
-//     $scope.editorEnabled = false;
-//   };
-//
-//     $scope.save = function() {
-//     photo.title = photo.editableTitle;
-//     $scope.disableEditor();
-//   };
-// };
+        $http.put(SERVER.URL + $stateParams.id, photo).then((res) => {
+
+        });
+      };
 }
 
 DetailController.$inject = ['$scope', '$stateParams', '$http', '$state', 'SERVER'];

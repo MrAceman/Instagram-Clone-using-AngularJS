@@ -1,17 +1,28 @@
-<h1 class="title">Photo Details Page</h1>
+<div ng-hide="editorNameEnabled" ng-click="enableNameEditor(detailPhoto)">
+<h1 class="title" ng-hide="editorNameEnabled">{{detailPhoto.name}} - Photo Details Page</h1>
+</div>
+
+<div  ng-show="editorNameEnabled"><input ng-model="editableName" class="nameInput">
+  <a class="nameChoices" ng-click="saveName(detailPhoto)">Save </a><a class="nameChoices" ng-click="disableNameEditor()">Cancel</a>
+</div>
+
+
 
 <div class="columns">
 <div class="column is-three-quarters">
   <a class="fullPic" href="{{detailPhoto.url}}">
   <img ng-src="{{ detailPhoto.url }}" alt="{{ detailPhoto.name }}"></div>
 </a>
-<div class="column is-one-quarter" ng-hide="editorEnabled">{{detailPhoto.description}}</div>
 
+<div class="column is-one-quarter" ng-hide="editorEnabled" ng-click="enableEditor(detailPhoto)">{{detailPhoto.description}}</div>
 <div class="column is-one-quarter" ng-show="editorEnabled">
-  <textarea class="photoDescription" ng-model="editableDescription" ng-show="editorEnabled">{{detailPhoto.description}}</textarea>
-  <a class="descriptionChoices" ng-click="save(detailPhoto)">Save </a><a class="descriptionChoices" ng-click="disableEditor()">Cancel</a>
-</div>
 
+  <textarea class="photoDescription" ng-model="editableDescription" ng-show="editorEnabled">{{detailPhoto.description}}</textarea>
+
+  <a class="descriptionChoices" ng-click="save(detailPhoto)">Save </a><a class="descriptionChoices" ng-click="disableEditor()">Cancel</a>
+
+</div>
+</div>
 <div class="choiceButtons">
 <button ng-click="enableEditor(detailPhoto)" class="edit-button">Edit Photo</button>
 <button ng-click="deletePhoto(detailPhoto._id)" class="delete-button">Delete Photo</button>

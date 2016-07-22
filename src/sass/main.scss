@@ -4,7 +4,7 @@
 
 img.userPic{
   height:200px;
-  // width:150px;
+  padding-top:10px;
   margin:10px auto;
   border-radius: 100%;
   text-align: center;
@@ -14,6 +14,15 @@ img.userPic{
   text-align: center;
   padding-top:10px;
   padding-bottom: 10px;
+}
+
+.title{
+  margin-bottom:10px;
+}
+
+.nameInput{
+  font-size:2em;
+  margin-bottom:10px;
 }
 
 .singlePhoto {
@@ -26,9 +35,6 @@ img.userPic{
   float: left;
   margin: 0 15px 15px 0;
   cursor: pointer;
-  // &:nth-child(5n+1) {
-  //   margin-right: 0;
-  // }
 }
 
 .media{
@@ -76,11 +82,7 @@ img.userPic{
 }
 
 .descriptionChoices{
-  font-size:2em;
-}
-
-.choiceButtons{
-  // clear:both;
+  font-size:1.5em;
 }
 
 .footer{
