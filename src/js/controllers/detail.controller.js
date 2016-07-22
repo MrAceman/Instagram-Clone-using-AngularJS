@@ -20,7 +20,7 @@ function DetailController($scope, $stateParams, $http, $state, SERVER) {
 // Functionality for editting photo description
       $scope.editorEnabled = false;
 
-      $scope.enableEditor = function() {
+      $scope.enableDesEditor = function() {
         $scope.editorEnabled = true;
         $scope.editableDescription = $scope.detailPhoto.description;
       };
@@ -57,6 +57,15 @@ function DetailController($scope, $stateParams, $http, $state, SERVER) {
 
         });
       };
+
+      // $scope.editorEnabled = false;
+      // $scope.editorNameEnabled = false;
+      //
+      // $scope.enableAllEditors() = function() {
+      //   console.log("Hi there");
+      //   // $scope.enableDesEditor();
+      //   // $scope.enableNameEditor();
+      // }
 }
 
 DetailController.$inject = ['$scope', '$stateParams', '$http', '$state', 'SERVER'];
