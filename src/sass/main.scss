@@ -70,19 +70,29 @@ img.userPic{
 .del-button{
   background: transparent;
   border:0;
+  -webkit-transition:color .5s, -webkit-transform .5s;
+  transition: color .5s, transform .5s;
 }
 
 .del-button:hover{
   color:red;
+  -webkit-transform: color 5s;
+   transform: color .5s;
 }
 
 .like-button{
+  float:right;
   background: transparent;
   border:0;
+  -webkit-transition:color .5s, -webkit-transform .5s;
+  transition: color .5s, transform .5s;
 }
 
 .like-button:hover{
   color:green;
+  -webkit-transform: color 5s;
+   transform: color .5s;
+
 }
 .fa{
   border:0;
@@ -99,9 +109,13 @@ img.userPic{
 
 .fullSizePic{
   position:relative;
+  -webkit-transition:color .5s, -webkit-transform .5s;
+  transition: color .5s, transform .5s;
 }
 .fullPic:hover + .detail-like-button {
     color: yellow;
+    -webkit-transform: color 1s;
+     transform: color 1s;
 }
 
 .detail-like-button{
@@ -110,10 +124,14 @@ img.userPic{
   right:40px;
   background: transparent;
   border:0;
+  -webkit-transition:color 2s, -webkit-transform 2s;
+  transition: color 2s, transform 2s;
 }
 
 .detail-like-button:hover{
   color:green;
+  -webkit-transform: color .5s;
+   transform: color .5s;
 }
 
 

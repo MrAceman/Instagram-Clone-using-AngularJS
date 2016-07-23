@@ -5,7 +5,7 @@ init();
 function init () {
     $http.get(SERVER.URL).then ((res) =>{
       $scope.photoArray = res.data;
-    })
+    });
 }
 
 $scope.deletePhoto = (id) => {
@@ -19,13 +19,8 @@ $scope.deletePhoto = (id) => {
  $scope.likePhoto = (photo) => {
    photo.likeCount ++;
     $http.put(SERVER.URL + photo._id,photo).then((res) => {
-
     });
  }
-
-
-
-
 }
 
 HomeController.$inject = ['$scope', '$http', 'SERVER'];
