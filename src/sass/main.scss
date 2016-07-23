@@ -52,6 +52,10 @@ img.userPic{
   right: 320px;
 }
 
+.mobileLikeCount{
+  display:none;
+}
+
 .name{
   float:left;
 }
@@ -140,4 +144,61 @@ img.userPic{
   text-align: center;
   clear:both;
   padding-top: 25px;
+}
+
+@media screen and (max-width: 768px) {
+
+  img.userPic{
+    height:200px;
+    float:left;
+    padding:20px;
+  }
+
+  .likeCount{
+    display:none;
+  }
+
+  .mobileLikeCount{
+    display:block;
+    text-align: center;
+  }
+
+
+  h1{
+    text-align: center;
+    padding:2px;
+    padding-bottom: 15px;
+  }
+
+  .singlePhoto {
+    max-width:100vw;
+  }
+
+  .card {
+    width: 100vw;
+  }
+
+
+  .photoDescription{
+    width:100vw;
+    text-align: center;
+    margin:5px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+
+img.userPic{
+  height:140px;
+  float:left;
+  padding:20px;
+  // padding-left: 20px;
+  // padding-right:20px;
+// margin:10px auto;
+// padding:10px auto;
+}
+
+
 }

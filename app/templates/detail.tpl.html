@@ -21,9 +21,9 @@
   </span>
   </button>
 </div>
-
-<div class="column is-one-quarter" ng-hide="editorEnabled" ng-click="enableDesEditor(detailPhoto)">{{detailPhoto.description}}</div>
-<div class="column is-one-quarter" ng-show="editorEnabled">
+<div class="mobileLikeCount">{{detailPhoto.likeCount}} <i class="fa fa-heart"></i></div>
+<div class="photoDescription column is-one-quarter" ng-hide="editorEnabled" ng-click="enableDesEditor(detailPhoto)">{{detailPhoto.description}}</div>
+<div class="photoDescription column is-one-quarter" ng-show="editorEnabled">
 
   <textarea class="photoDescription" ng-model="editableDescription" ng-show="editorEnabled">{{detailPhoto.description}}</textarea>
 
