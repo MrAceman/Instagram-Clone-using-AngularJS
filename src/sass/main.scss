@@ -42,6 +42,15 @@ img.userPic{
 
 }
 
+.headerDiv{
+  position:relative;
+}
+
+.likeCount{
+  position:absolute;
+  top:25px;
+  right: 320px;
+}
 
 .name{
   float:left;
@@ -59,7 +68,7 @@ img.userPic{
 }
 
 .del-button{
-  background-color: transparent;
+  background: transparent;
   border:0;
 }
 
@@ -68,12 +77,15 @@ img.userPic{
 }
 
 .like-button{
-  background-color: transparent;
+  background: transparent;
   border:0;
 }
 
 .like-button:hover{
   color:green;
+}
+.fa{
+  border:0;
 }
 
 .photoDescription{
@@ -84,6 +96,27 @@ img.userPic{
 .descriptionChoices{
   font-size:1.5em;
 }
+
+.fullSizePic{
+  position:relative;
+}
+.fullPic:hover + .detail-like-button {
+    color: yellow;
+}
+
+.detail-like-button{
+  position:absolute;
+  top:40px;
+  right:40px;
+  background: transparent;
+  border:0;
+}
+
+.detail-like-button:hover{
+  color:green;
+}
+
+
 
 .footer{
   text-align: center;

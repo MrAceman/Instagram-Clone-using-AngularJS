@@ -1,5 +1,6 @@
-<div ng-hide="editorNameEnabled" ng-click="enableNameEditor(detailPhoto)">
+<div class="headerDiv" ng-hide="editorNameEnabled" ng-click="enableNameEditor(detailPhoto)">
 <h1 class="title" ng-hide="editorNameEnabled">{{detailPhoto.name}} - Photo Details Page</h1>
+<p class="likeCount">{{detailPhoto.likeCount}} <i class="fa fa-heart"></i></p>
 </div>
 
 <div  ng-show="editorNameEnabled"><input ng-model="editableName" class="nameInput">
@@ -9,10 +10,17 @@
 
 
 <div class="columns">
-<div class="column is-three-quarters">
+<div class="column is-three-quarters fullSizePic">
   <a class="fullPic" href="{{detailPhoto.url}}">
-  <img ng-src="{{ detailPhoto.url }}" alt="{{ detailPhoto.name }}"></div>
-</a>
+  <img ng-src="{{ detailPhoto.url }}" alt="{{ detailPhoto.name }}"></a>
+
+  <button ng-click="likePhoto(detailPhoto)" class="detail-like-button">
+      <span class="fa-stack fa-lg">
+    <i class="fa fa-square-o fa-stack-2x"></i>
+    <i class="fa fa-heart fa-stack-1x" aria-hidden="true"></i>
+  </span>
+  </button>
+</div>
 
 <div class="column is-one-quarter" ng-hide="editorEnabled" ng-click="enableDesEditor(detailPhoto)">{{detailPhoto.description}}</div>
 <div class="column is-one-quarter" ng-show="editorEnabled">

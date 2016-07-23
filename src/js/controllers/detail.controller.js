@@ -17,6 +17,12 @@ function DetailController($scope, $stateParams, $http, $state, SERVER) {
       });
     }
 
+    $scope.likePhoto = (photo) => {
+      photo.likeCount ++;
+       $http.put(SERVER.URL + $stateParams.id,photo).then((res) => {
+       });
+    }
+
 // Functionality for editting photo description
       $scope.editorEnabled = false;
 
@@ -37,6 +43,7 @@ function DetailController($scope, $stateParams, $http, $state, SERVER) {
 
         });
       };
+
 // Functionality for editting photo title
       $scope.editorNameEnabled = false;
 
@@ -58,14 +65,13 @@ function DetailController($scope, $stateParams, $http, $state, SERVER) {
         });
       };
 
-      // $scope.editorEnabled = false;
-      // $scope.editorNameEnabled = false;
-      //
-      // $scope.enableAllEditors() = function() {
-      //   console.log("Hi there");
-      //   // $scope.enableDesEditor();
-      //   // $scope.enableNameEditor();
-      // }
+      $scope.editorEnabled = false;
+      $scope.editorNameEnabled = false;
+
+      $scope.enableAllEditors = function() {
+        $scope.enableDesEditor();
+        $scope.enableNameEditor();
+      }
 }
 
 DetailController.$inject = ['$scope', '$stateParams', '$http', '$state', 'SERVER'];

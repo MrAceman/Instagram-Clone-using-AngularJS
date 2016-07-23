@@ -18,7 +18,6 @@ $scope.deletePhoto = (id) => {
 
  $scope.likePhoto = (photo) => {
    photo.likeCount ++;
-  console.log(photo);
     $http.put(SERVER.URL + photo._id,photo).then((res) => {
 
     });
