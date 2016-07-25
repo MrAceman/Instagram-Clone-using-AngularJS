@@ -1,204 +1,204 @@
 @import 'bulma';
 
-
-
-img.userPic{
-  height:200px;
-  padding-top:10px;
-  margin:10px auto;
-  border-radius: 100%;
-  text-align: center;
+*:focus {
+    outline: none;
 }
 
-.navigation{
-  text-align: center;
-  padding-top:10px;
-  padding-bottom: 10px;
+img.userPic {
+    height: 200px;
+    padding-top: 10px;
+    margin: 10px auto;
+    border-radius: 100%;
+    text-align: center;
 }
-
-.title{
-  margin-bottom:10px;
+.navigation {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-
-.nameInput{
-  font-size:2em;
-  margin-bottom:10px;
+.title {
+    margin-bottom: 5px;
 }
-
+.nameInput {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
 .singlePhoto {
-  max-width:250px;
-  margin:0;
+    // max-width: 275px;
+    // margin: 0;
 }
-
 .card {
-  width: 250px;
-  float: left;
-  margin: 0 15px 15px 0;
-  cursor: pointer;
+    width: 23%;
+    float: left;
+    margin: 0 15px 15px 0;
+    cursor: pointer;
 }
-
-.media{
-  text-align: center;
-
-}
-
-.headerDiv{
-  position:relative;
-}
-
-.likeCount{
-  position:absolute;
-  top:25px;
-  right: 320px;
-}
-
-.mobileLikeCount{
-  display:none;
-}
-
-.name{
-  float:left;
-}
-
-.but{
-  float:right;
-}
-
-.edit-button{
+.card-content{
+  padding:10px;
 
 }
-
-.delete-button{
+.headerDiv {
+    position: relative;
 }
-
-.del-button{
-  background: transparent;
-  border:0;
-  -webkit-transition:color .5s, -webkit-transform .5s;
-  transition: color .5s, transform .5s;
+.likeCount {
+    position: absolute;
+    top: 25px;
+    right: 320px;
 }
-
-.del-button:hover{
-  color:red;
-  -webkit-transform: color 5s;
-   transform: color .5s;
+.mobileLikeCount {
+    display: none;
 }
-
-.like-button{
-  float:right;
-  background: transparent;
-  border:0;
-  -webkit-transition:color .5s, -webkit-transform .5s;
-  transition: color .5s, transform .5s;
+.name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
-
-.like-button:hover{
-  color:green;
-  -webkit-transform: color 5s;
-   transform: color .5s;
-
+.del-button {
+    // float: right;
+    background: transparent;
+    border: 0;
+    -webkit-transition: color 0.5s, -webkit-transform 0.5s;
+    transition: color 0.5s, transform 0.5s;
 }
-.fa{
-  border:0;
+.del-button:hover {
+    color: red;
+    -webkit-transform: color 5s;
+    transform: color 0.5s;
+    -webkit-animation: spin 2s infinite linear;
 }
-
-.photoDescription{
-  width:100%;
-  height:100%;
+.like-button {
+    // float: right;
+    background: transparent;
+    border: 0;
+    -webkit-transition: color 0.5s, -webkit-transform 0.5s;
+    transition: color 0.5s, transform 0.5s;
 }
-
-.descriptionChoices{
-  font-size:1.5em;
+.like-button:hover {
+    color: green;
+    -webkit-transform: color 5s;
+    transform: color 0.5s;
+    -webkit-animation: spin 2s infinite linear;
 }
-
-.fullSizePic{
-  position:relative;
-  -webkit-transition:color .5s, -webkit-transform .5s;
-  transition: color .5s, transform .5s;
+.like-stack {
+    align-self: flex-end;
+}
+.delete-stack {
+    align-self: flex-end;
+}
+.fa {
+    border: 0;
+}
+.but {
+    // align-self: flex-end;
+    // align-content: flex-end;
+}
+.photoDescription {
+    width: 100%;
+    height: 100%;
+}
+.descriptionChoices {
+    font-size: 1.5em;
+}
+.fullSizePic {
+    position: relative;
+    -webkit-transition: color 0.5s, -webkit-transform 0.5s;
+    transition: color 0.5s, transform 0.5s;
 }
 .fullPic:hover + .detail-like-button {
     color: yellow;
     -webkit-transform: color 1s;
-     transform: color 1s;
+    transform: color 1s;
+    // Sets the spin animation
+    -webkit-animation: spin 2s infinite linear;
 }
 
-.detail-like-button{
-  position:absolute;
-  top:40px;
-  right:40px;
-  background: transparent;
-  border:0;
-  -webkit-transition:color 2s, -webkit-transform 2s;
-  transition: color 2s, transform 2s;
-}
-
-.detail-like-button:hover{
-  color:green;
-  -webkit-transform: color .5s;
-   transform: color .5s;
+.pictureButtons{
+  display:flex;
+  // align-items: flex-end;
+  // align-self: flex-end;
+  // align-content: flex-end;
 }
 
 
-
-.footer{
-  text-align: center;
-  clear:both;
-  padding-top: 25px;
+// Defines the spin animation keyframes.
+@-moz-keyframes spin {
+    from {
+        -moz-transform: rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg);
+    }
 }
-
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.detail-like-button {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: transparent;
+    border: 0;
+    -webkit-transition: color 2s, -webkit-transform 2s;
+    transition: color 2s, transform 2s;
+}
+.detail-like-button:hover {
+    color: green;
+    -webkit-transform: color 0.5s;
+    transform: color 0.5s;
+    // Sets the spin animation
+    -webkit-animation: spin 2s infinite linear;
+}
+.footer {
+    text-align: center;
+    clear: both;
+    padding-top: 25px;
+}
 @media screen and (max-width: 768px) {
-
-  img.userPic{
-    height:200px;
-    float:left;
-    padding:20px;
-  }
-
-  .likeCount{
-    display:none;
-  }
-
-  .mobileLikeCount{
-    display:block;
-    text-align: center;
-  }
-
-
-  h1{
-    text-align: center;
-    padding:2px;
-    padding-bottom: 15px;
-  }
-
-  .singlePhoto {
-    max-width:100vw;
-  }
-
-  .card {
-    width: 100vw;
-  }
-
-
-  .photoDescription{
-    width:100vw;
-    text-align: center;
-    margin:5px;
-  }
-
+    img.userPic {
+        height: 200px;
+        float: left;
+        padding: 20px;
+    }
+    .likeCount {
+        display: none;
+    }
+    .mobileLikeCount {
+        display: block;
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+        padding: 2px 2px 15px;
+    }
+    .singlePhoto {
+        max-width: 100vw;
+    }
+    .card {
+        width: 100vw;
+    }
+    .photoDescription {
+        width: 100vw;
+        text-align: center;
+        margin: 5px;
+    }
 }
-
 @media screen and (max-width: 500px) {
-
-
-img.userPic{
-  height:140px;
-  float:left;
-  padding:20px;
-  // padding-left: 20px;
-  // padding-right:20px;
-// margin:10px auto;
-// padding:10px auto;
-}
-
-
+    img.userPic {
+        height: 140px;
+        float: left;
+        padding: 20px;
+    }
 }

@@ -10,23 +10,24 @@
         </div>
     </a>
     <div class="card-content">
+
         <div class="media">
             <p class="name title is-5">{{photo.name}}</p>
-
+<span class="pictureButtons">
                 <button ng-click="likePhoto(photo)" class="but like-button">
-                    <span class="fa-stack fa-lg">
+                    <span class="like-stack fa-stack fa-lg">
                   <i class="fa fa-square-o fa-stack-2x"></i>
                   <i class="fa fa-heart fa-stack-1x" aria-hidden="true"></i>
                 </span>
               </button>
                 <span class="likes">{{photo.likeCount}}</span>
                 <button ng-click="deletePhoto(photo._id)" class="but del-button">
-                    <span class="fa-stack fa-lg">
+                    <span class="delete-stack fa-stack fa-lg">
                     <i class="fa fa-square-o fa-stack-2x"></i>
                     <i class="fa fa-trash fa-stack-1x" aria-hidden="true"></i>
                   </span>
                 </button>
-
+              </span>
         </div>
 
     </div>
