@@ -11,12 +11,12 @@ The primary purposes of this exercise were to:
 2. Demonstrate an understanding of how to build an application from scratch.
 
 Some of the core competencies practiced in this project include:
-  Rapid development of a single page app using AngularJS.  
-  Styling in CSS utilizing Bulma.
-  Use of abstract states (root) to create a consistent layout.
-  Logical separation of functionality across multiple controllers and HTML templates.
-  CSS Media Query breakpoints to provide a more pleasing mobile user experience.
-  Data persistence (including ability to edit stored data) to backend server facilitated through use of AngularJS $http service.
+  1. Rapid development of a single page app using AngularJS.  
+  2. Styling in CSS utilizing Bulma.
+  3. Use of abstract states (root) to create a consistent layout.
+  4. Logical separation of functionality across multiple controllers and HTML templates.
+  5. CSS Media Query breakpoints to provide a more pleasing mobile user experience.
+  6. Data persistence (including ability to edit stored data) to backend server facilitated through use of AngularJS $http service.
 
 This project has been deployed to Surge at: http://tiy-niclaswillems-instagram-clone-angular.surge.sh
 
